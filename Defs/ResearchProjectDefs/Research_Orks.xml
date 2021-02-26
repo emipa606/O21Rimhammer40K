@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Ork  Research-->
+  <ResearchProjectTagDef>
+    <defName>OrkStart</defName>
+  </ResearchProjectTagDef>
+  <ResearchProjectDef>
+    <tab>RH40K_Tab2</tab>
+    <defName>O21_Ork_Research</defName>
+    <label>Ork Tek</label>
+    <description>Allows ya ta research Ork subjects.</description>
+    <baseCost>100</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tags>
+      <li>OrkStart</li>
+    </tags>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>1.55</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <tab>RH40K_Tab2</tab>
+    <defName>O21_Ork_Apparel</defName>
+    <label>Basic Clothes</label>
+    <description>Provides access to Ork fatigues.</description>
+    <baseCost>200</baseCost>
+    <prerequisites>
+      <li>O21_Ork_Research</li>
+    </prerequisites>
+    <techLevel>Spacer</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>0.90</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <tab>RH40K_Tab2</tab>
+    <defName>O21_Ork_Apparel_Red</defName>
+    <label>Speed Kult</label>
+    <description>Provides access ta red Ork armour, dis gear will make yer go fasta dan any otha Ork.</description>
+    <baseCost>200</baseCost>
+    <prerequisites>
+      <li>O21_Ork_Apparel</li>
+    </prerequisites>
+    <techLevel>Spacer</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>1.25</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <tab>RH40K_Tab2</tab>
+    <defName>O21_Ork_Apparel_Kommando</defName>
+    <label>Kommando Gear</label>
+    <description>Provides access ta da Ork kommando gear.</description>
+    <baseCost>200</baseCost>
+    <prerequisites>
+      <li>O21_Ork_Apparel</li>
+    </prerequisites>
+    <techLevel>Spacer</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.70</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <tab>RH40K_Tab2</tab>
+    <defName>O21_Ork_Weapons_Basic</defName>
+    <label>Crude Weapons</label>
+    <description>Provides access ta Ork sluggas.</description>
+    <baseCost>200</baseCost>
+    <prerequisites>
+      <li>O21_Ork_Research</li>
+    </prerequisites>
+    <techLevel>Spacer</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.55</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <tab>RH40K_Tab2</tab>
+    <defName>O21_Ork_Weapons_Shootas</defName>
+    <label>Shootas</label>
+    <description>Provides access ta da Ork Shootas.</description>
+    <baseCost>200</baseCost>
+    <prerequisites>
+      <li>O21_Ork_Apparel</li>
+    </prerequisites>
+    <techLevel>Spacer</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.05</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <tab>RH40K_Tab2</tab>
+    <defName>O21_Ork_Weapons_Choppas</defName>
+    <label>Choppas</label>
+    <description>Provides access ta da Ork Choppas.</description>
+    <baseCost>200</baseCost>
+    <prerequisites>
+      <li>O21_Ork_Apparel</li>
+    </prerequisites>
+    <techLevel>Spacer</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>1.90</researchViewY>
+  </ResearchProjectDef>
+</Defs>

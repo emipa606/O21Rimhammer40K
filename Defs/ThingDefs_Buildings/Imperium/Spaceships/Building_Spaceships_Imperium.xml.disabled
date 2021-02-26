@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<O21ToolBox.Spaceships.ThingDef_Spaceship Name="Ship_Arvus">
+		<defName>Ship_ArvusLighter</defName>
+		<label>arvus lighter</label>
+		<description>A voidship used by various Imperium factions to convey bulk resources, materials and personnel.</description>
+		<spaceshipSettings>
+			<graphicPaths>
+				<!-- Texture used when landing and taking off, good for providing a middle animation. Example: Folding wings, or VTOL engines. -->
+				<landingTexPath>Things/Ships/Imperium/ArvusLighterImperium</landingTexPath>
+				<!-- Texture used when in flight. -->
+				<flyingTexPath>Things/Ships/Imperium/ArvusLighterImperium</flyingTexPath>
+				<!-- Texture used for the shadow projected onto the ground below. -->
+				<shadowTexPath>Things/Ships/Imperium/ArvusLighterImperiumShadow</shadowTexPath>
+				<!-- Drawsize used for flight. -->
+				<drawSize>(5.5, 5.5)</drawSize>
+				<!-- Actual size of ship. -->
+				<size>(5,5)</size>
+			</graphicPaths>
+			<!-- List of roles this ship can perform in -->
+			<roles>
+				<!-- Can show up periodically to trade -->
+				<li>CargoPeriodic</li>
+				<!-- Can show up when requested to trade -->
+				<li>CargoRequested</li>
+				<!-- Can show up damaged requesting for you to repair it -->
+				<li>Damaged</li>
+				<!-- Can show up to drop off an expidition/raid -->
+				<li>DispatcherDrop</li>
+				<!-- Can show up to pick up an expidition/raid -->
+				<li>DispatcherPick</li>
+				<!-- Can show up for medical purposes -->
+				<li>Medical</li>
+			</roles>
+			<!-- Designate the required and maximum slots pawns can fill in the ship. -->
+			<crewSettings>
+				<!-- Pilots, if the ship can function unmanned then use 0 for the required -->
+				<pilotReq>1</pilotReq>
+				<pilotMax>1</pilotMax>
+				<!-- Total Maximum Passengers, this does NOT include pilots. In PawnGroups this includes everything that isn't a pilot. -->
+				<passengerMax>12</passengerMax>
+			</crewSettings>
+			<!-- List of factions who can use this ship in the listed roles. If factions are assigned multiple ships for any roles they will select one at random. -->
+			<factions>
+				<li>IGCadian412</li>
+			</factions>
+			<!-- Pawns used are handled in the faction def, using a new pawnGroupMaker, use a standard name suffixed with _Cargo etc. to designate the needed groups depending on the roles the ship can do. -->
+			<pawnGroupTag>Arvus</pawnGroupTag>
+			<!-- Settings for if the ship is buildable by players. -->
+			<landedDef>Building_ArvusImperium</landedDef>
+		</spaceshipSettings>
+		<!-- Stats - Generally the same as pawn stats. Sensitivity changes how much pawns inside are affected, so 0 means they are 100% safe from it. -->
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<MoveSpeed>10</MoveSpeed>
+			<Flammability>0.3</Flammability>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<ToxicSensitivity>0</ToxicSensitivity>
+			<ArmorRating_Blunt>0.80</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.95</ArmorRating_Heat>
+		</statBases>
+		<!-- Basically surgery for spaceships. Texture overlays for paint jobs, changing the weapon they have, etc. -->
+		<modifications/>
+	</ThingDef>
+
+	<O21ToolBox.ThingDef_Spaceship Name="BaseSpaceshipBomber">
+		<defName>ShipMarauderBomber</defName>
+		<label>marauder bomber</label>
+		<description>A voidship used by various Imperium factions in combat as a fighter but primarily as a bomber.</description>
+		<thingClass>O21Toolbox.Spaceship.Building_SpaceshipCargo</thingClass>
+		<graphicData>
+			<texPath>Things/Ships/Imperium/MarauderImperium</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(7.5,7.5)</drawSize>
+		</graphicData>
+		<size>(7,7)</size>
+		<comps>
+			<!-- graphicData and size only applies to the landed ship. Comp_Spaceship is used to provide the flying and shadow textures, as well as any other needed data. -->
+			<li Class="O21Toolbox.Spaceship.CompProperties_Spaceship">
+				<compClass>O21Toolbox.Spaceship.Comp_Spaceship</compClass>
+				<!-- Texture used when in flight, turrets are only really there when landed so it is best to have a texture with them included for during flight. -->
+				<flyingTexPath>Things/Ships/Imperium/MarauderImperiumFlying</flyingTexPath>
+				<!-- Texture used when in flight for the shadow projected onto the ground below. -->
+				<shadowTexPath>Things/Ships/Imperium/MarauderImperiumShadow</shadowTexPath>
+				<!-- Texture used when landing and taking off, good for providing a middle animation. Example: Folding wings, or VTOL engines. -->
+				<landingTexPath>Things/Ships/Imperium/MarauderImperiumFlying</landingTexPath>
+				<!-- Drawsize used for flight. -->
+				<drawSize>(7.5, 7.5)</drawSize>
+				<!-- Actual size of ship in flight. -->
+				<size>(7, 7)</size>
+				<!-- List of roles this ship can perform in -->
+				<typeList>
+					<!-- Can show up as a bombing craft in airstrikes -->
+					<li>Airstrike</li>
+					<!-- Can show up damaged requesting for you to repair it -->
+					<li>Damaged</li>
+				</typeList>
+				<!-- Designate the required and maximum slots pawns can fill in the ship. -->
+				<crewSettings>
+					<!-- Pilots, if the ship can function unmanned then use 0 for the required -->
+					<pilotReq>1</pilotReq>
+					<pilotMax>1</pilotMax>
+					<!-- Total Maximum Passengers, this does NOT include pilots. In PawnGroups this includes everything that isn't a pilot. -->
+					<passengerMax>0</passengerMax>
+				</crewSettings>
+				<!-- Addon Settings -->
+				<!-- Addons can attach things like turrets to the ship, as well as setting when they can be active. -->
+				<addonSettings>
+					<li>
+						<!-- Type of addon to be applied, this changes what settings are available to it and how it behaves. -->
+						<addonType>Turret</addonType>
+						<!-- Def for the turret. -->
+						<turretDef>MarauderTurret</turretDef>
+						<!-- Offset applied to this turret -->
+						<turretOffset>(0, 3)</turretOffset>
+						<!-- When the turret can fire. Always = Any time at all, Landed = Only when on the ground, Flying = Only while flying. -->
+						<activeWhen>Always</activeWhen>
+					</li>
+				</addonSettings>
+				<!-- List of factions who can use this ship in the listed roles. If factions are assigned multiple ships for any roles they will select one at random. -->
+				<factions>
+					<li>IGCadian412</li>
+				</factions>
+				<!-- Pawns used are handled in the faction def, using a new pawnGroupMaker, use a standard name suffixed with _Cargo etc. to designate the needed groups depending on the roles the ship can do. -->
+				<pawnGroupTag>Arvus</pawnGroupTag>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>O21_Imp_Research</li>
+		</researchPrerequisites>
+		<designationCategory>Ship</designationCategory>
+	</ThingDef>
+
+</Defs>

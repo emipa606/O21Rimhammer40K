@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef>
+    <defName>GSCultistPlayerColony</defName>
+    <label>Genestealer Cult Colony</label>
+    <description>Your own cult community.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>GSCultist</basicMemberKind>
+    <pawnsPlural>genestealer cultists</pawnsPlural>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <techLevel>Ultra</techLevel>
+    <backstoryCategories>
+      <li>TerranBackstory</li>
+    </backstoryCategories>
+    <settlementTexturePath>World/ZoomedIn_Base</settlementTexturePath>
+    <factionIconPath>World/TerranBaseIcon</factionIconPath>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+      <li>ImperiumStart</li>
+    </startingResearchTags>
+    <hairTags>
+      <li>TerranHair</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <colorSpectrum>
+      <li>(0, 0.737, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+</Defs>

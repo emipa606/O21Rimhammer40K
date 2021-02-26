@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Orbital Relay -->
+  <NoFriendlyFactionRH>no friendly factions</NoFriendlyFactionRH>
+  <RequestFreeMilitaryAidRH>Request weak reinforcements (free)</RequestFreeMilitaryAidRH>
+  <RequestPaidMilitaryAidRH>Request decent reinforcements (500 silver)</RequestPaidMilitaryAidRH>
+  <RequestHeavyPaidMilitaryAidRH>Request strong reinforcements (900 silver)</RequestHeavyPaidMilitaryAidRH>
+  <!-- Mod General Settings -->
+  <SettingsGeneral>General Settings</SettingsGeneral>
+  <UseCustomBackgroundLabel>Use Custom Background</UseCustomBackgroundLabel>
+  <UseCustomBackgroundDesc>Enables the custom background to show on the main menu.</UseCustomBackgroundDesc>
+  <!-- Zones -->
+  <CrystalGrowingZone>crystal growing zone</CrystalGrowingZone>
+  <CrystalDesignatorGrowingZoneDesc>Create a zone where your colonists will try to grow a certain kind of crystal.</CrystalDesignatorGrowingZoneDesc>
+  <!-- PawnCrafter: Necrons -->
+  <NecronAwakenedLetterLabel>Necron Awakened: {0}</NecronAwakenedLetterLabel>
+  <NecronAwakenedLetterDescription>{0} rises from the tomb at last, ready to serve.</NecronAwakenedLetterDescription>
+</LanguageData>

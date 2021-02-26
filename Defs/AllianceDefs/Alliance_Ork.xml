@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <O21Toolbox.Alliances.AllianceDef>
+    <defName>O21_Alliance_Ork</defName>
+    <label>ork waaagh!</label>
+    <memberFactions>
+      <li>OrkBadMoons</li>
+      <li>OrkDeathskulls</li>
+      <li>OrkEvilSunz</li>
+    </memberFactions>
+    <factionRelations>
+      <li>
+        <faction>OrkPlayerColony</faction>
+        <relation>75</relation>
+      </li>
+    </factionRelations>
+    <allianceRelations>
+      <li>
+        <alliance>O21_Alliance_Imperium</alliance>
+        <relation>-100</relation>
+      </li>
+      <li>
+        <alliance>O21_Alliance_Eldar</alliance>
+        <relation>-100</relation>
+      </li>
+      <li>
+        <alliance>O21_Alliance_Tau</alliance>
+        <relation>-100</relation>
+      </li>
+    </allianceRelations>
+  </O21Toolbox.Alliances.AllianceDef>
+</Defs>

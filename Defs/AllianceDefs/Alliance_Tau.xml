@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <O21Toolbox.Alliances.AllianceDef>
+    <defName>O21_Alliance_Tau</defName>
+    <label>tau empire</label>
+    <memberFactions>
+      <li>TauEmpire</li>
+      <li>SaceaSept</li>
+    </memberFactions>
+    <factionRelations>
+      <li>
+        <faction>TauPlayerColony</faction>
+        <relation>75</relation>
+      </li>
+    </factionRelations>
+    <allianceRelations>
+      <li>
+        <alliance>O21_Alliance_Imperium</alliance>
+        <relation>-100</relation>
+      </li>
+      <li>
+        <alliance>O21_Alliance_Eldar</alliance>
+        <relation>-100</relation>
+      </li>
+      <li>
+        <alliance>O21_Alliance_Ork</alliance>
+        <relation>-100</relation>
+      </li>
+    </allianceRelations>
+  </O21Toolbox.Alliances.AllianceDef>
+</Defs>

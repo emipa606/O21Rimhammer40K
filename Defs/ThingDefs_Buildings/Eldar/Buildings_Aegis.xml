@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="O21_EldarAegis" ParentName="O21_AegisWall_Base">
+    <defName>O21_EldarAegis</defName>
+    <label>Eldar Aegis Wall</label>
+    <description>A defensive wall that provides cover to fire from.</description>
+    <uiIconPath>Things/Building/Structure/Aegis/ELD/ELD_aegis_menu</uiIconPath>
+    <passability>PassThroughOnly</passability>
+    <pathCost>300</pathCost>
+    <pathCostIgnoreRepeat>True</pathCostIgnoreRepeat>
+    <fillPercent>0.80</fillPercent>
+    <graphicData>
+      <texPath>Things/Building/Structure/Aegis/ELD/ELD_aegis_atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1800</MaxHitPoints>
+      <WorkToBuild>500</WorkToBuild>
+    </statBases>
+    <costList>
+      <Wraithbone>5</Wraithbone>
+    </costList>
+    <researchPrerequisites>
+      <li>O21_Eld_DefensiveStructure</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>

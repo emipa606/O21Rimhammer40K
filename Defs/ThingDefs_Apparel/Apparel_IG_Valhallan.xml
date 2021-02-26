@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ====== Clothing ====== -->
+  <ThingDef ParentName="CadianUniformBase">
+    <!-- Valhallan Uniform -->
+    <defName>ValhallanUniform</defName>
+    <label>Valhallan Uniform</label>
+    <description>A full-body uniform the Valhallan Ice Warriors most often wear, typically under their armor.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Valhallan/Clothing/Valhallan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <wornGraphicPath>Things/Imperial Guard/Valhallan/Clothing/Valhallan</wornGraphicPath>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>ValhallanApparel</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+  <!-- ====== Armors ====== -->
+  <ThingDef ParentName="CadianArmorBase">
+    <!-- Valhallan Armour -->
+    <defName>ValhallanArmor</defName>
+    <label>Valhallan Armor</label>
+    <description>The armor commonly worn by the Imperial Guard Valhallan regiments.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Valhallan/Armor/ValhallanArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>ValhallanApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Imperial Guard/Valhallan/Armor/ValhallanArmor</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <!-- ====== Helmets ====== -->
+  <ThingDef ParentName="CadianHelmet">
+    <!-- Valhallan Helmet -->
+    <defName>ValhallanHelmet</defName>
+    <label>Valhallan Helmet</label>
+    <description>The helmet commonly worn by the Imperial Guard Valhallan regiments. Provides a small bonus to cold protection.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Valhallan/Hats/ValhallanHelmet_normal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>ValhallanApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Imperial Guard/Valhallan/Hats/ValhallanHelmet_normal</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianFieldCap">
+    <defName>ValhallanFieldCap</defName>
+    <label>valhallan field cap</label>
+    <description>The field cap commonly worn by the Imperial Guard Valhallan regiments. Provides a small bonus to cold protection.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Valhallan/Hats/ValhallanHat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>ValhallanApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Imperial Guard/Valhallan/Hats/ValhallanHat</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianFieldCap">
+    <defName>ValhallanFurhat</defName>
+    <label>Valhallan Furhat</label>
+    <description>The furhat commonly worn by the Imperial Guard Valhallan regiments. Provides a small bonus to cold protection.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Valhallan/Hats/ValhallanFurhat_normal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>ValhallanApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Imperial Guard/Valhallan/Hats/ValhallanFurhat_normal</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianFieldCap">
+    <defName>ValhallanFurhatMask</defName>
+    <label>Valhallan Furhat (Masked)</label>
+    <description>The furhat commonly worn by the Imperial Guard Valhallan regiments. Provides a small bonus to cold protection.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Valhallan/Hats/ValhallanFurhat_mask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>ValhallanApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Imperial Guard/Valhallan/Hats/ValhallanFurhat_mask</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianHelmet">
+    <defName>ValhallanHelmetGas</defName>
+    <label>Valhallan Helmet (Gasmask)</label>
+    <description>The helmet commonly worn by the Imperial Guard Valhallan regiments. Provides a small bonus to cold protection.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Valhallan/Hats/ValhallanHelmet_gasmask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>ValhallanApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Imperial Guard/Valhallan/Hats/ValhallanHelmet_gasmask</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.30</ToxicSensitivity>
+    </equippedStatOffsets>
+  </ThingDef>
+  <ThingDef ParentName="CadianHelmet">
+    <defName>ValhallanHelmetMask</defName>
+    <label>Valhallan Helmet (Balaclava)</label>
+    <description>The helmet commonly worn by the Imperial Guard Valhallan regiments. Provides a small bonus to cold protection.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Valhallan/Hats/ValhallanHelmet_mask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>ValhallanApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Imperial Guard/Valhallan/Hats/ValhallanHelmet_mask</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <!-- Ogryn Gear -->
+  <ThingDef ParentName="CadianOgrynFatigues">
+    <defName>OgrynValhallanBodysuit</defName>
+    <label>ogryn bodysuit (valhallan)</label>
+    <description>Simple clothing worn by Ogryn.</description>
+    <graphicData>
+      <texPath>Things/Ogryn/Valhallan/Apparel/ValhallanCoat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>OgrynValhallanApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Ogryn/Valhallan/Apparel/ValhallanCoat</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="OgrynFieldCap">
+    <defName>OgrynValhallanFurhat</defName>
+    <label>ogryn furhat</label>
+    <description>Furhat large enough for Ogryns, designed by Valhallans.</description>
+    <graphicData>
+      <texPath>Things/Ogryn/Valhallan/Hats/OgrynFurhat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>OgrynValhallanApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Ogryn/Valhallan/Hats/OgrynFurhat</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+</Defs>

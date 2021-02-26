@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef ParentName="PawnNecronWarriorBase">
+    <defName>NecronWarriorGreen</defName>
+    <label>Necron Warrior (Green)</label>
+    <race>Alien_NecronWarriorGreen</race>
+    <defaultFactionType>NecronGreenPlayerColony</defaultFactionType>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PawnNecronDeathmarkBase">
+    <defName>NecronDeathmarkGreen</defName>
+    <label>Necron Warrior (Green)</label>
+    <race>Alien_NecronDeathmarkGreen</race>
+    <defaultFactionType>NecronGreenPlayerColony</defaultFactionType>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PawnNecronLordBase">
+    <defName>NecronLordGreen</defName>
+    <label>Necron Lord (Green)</label>
+    <race>Alien_NecronLordGreen</race>
+    <defaultFactionType>NecronGreenPlayerColony</defaultFactionType>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PawnNecronOverlordBase">
+    <defName>NecronOverlordGreen</defName>
+    <label>Necron Overlord (Green)</label>
+    <race>Alien_NecronOverlordGreen</race>
+    <defaultFactionType>NecronGreenPlayerColony</defaultFactionType>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PawnNecronPariahBase">
+    <defName>NecronPariahGreen</defName>
+    <label>Necron Pariah (Green)</label>
+    <race>Alien_NecronPariahGreen</race>
+    <defaultFactionType>NecronGreenPlayerColony</defaultFactionType>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PawnNecronSpyderBase">
+    <defName>NecronSpyderGreen</defName>
+    <label>Necron Spyder (Green)</label>
+    <race>Alien_NecronSpyderGreen</race>
+    <defaultFactionType>NecronGreenPlayerColony</defaultFactionType>
+  </PawnKindDef>
+</Defs>

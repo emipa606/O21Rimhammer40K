@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef Name="NecronPlayerFactionBase" Abstract="True">
+    <description>Your own community.</description>
+    <isPlayer>true</isPlayer>
+    <pawnsPlural>Necrons</pawnsPlural>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <techLevel>Ultra</techLevel>
+    <backstoryCategories>
+      <li>NecronBackstory</li>
+    </backstoryCategories>
+    <settlementTexturePath>World/ZoomedIn_Base</settlementTexturePath>
+    <factionIconPath>World/NecronBaseIcon</factionIconPath>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+      <li>NecronStart</li>
+    </startingResearchTags>
+    <hairTags>
+      <li>NecronHair</li>
+    </hairTags>
+    <colorSpectrum>
+      <li>(0, 0.737, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+</Defs>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- <RecipeDef>
+		<defName>FabricateNecrodermis</defName>
+		<label>fabricate necrodermis</label>
+		<description>Create Necrodermis from raw energy.</description>
+		<jobString>Fabricating necrodermis from energy grid.</jobString>
+		<workAmount>1000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<products>
+			<Necrodermis>4</Necrodermis>
+		</products>
+		<researchPrerequisite>O21_Nec_Research</researchPrerequisite>
+		<recipeUsers>
+			<li>NecronFabricationAltar</li>
+		</recipeUsers>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>FabricateNecrodermisPowerless</defName>
+		<label>fabricate necrodermis</label>
+		<description>Create Necrodermis from raw energy.</description>
+		<jobString>Fabricating necrodermis from internal energy stores.</jobString>
+		<workAmount>2000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<products>
+			<Necrodermis>2</Necrodermis>
+		</products>
+		<researchPrerequisite>O21_Nec_Research</researchPrerequisite>
+		<recipeUsers>
+			<li>CraftingSpot</li>
+		</recipeUsers>
+	</RecipeDef> -->
+</Defs>

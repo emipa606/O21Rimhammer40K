@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ====== Clothing ====== -->
+  <ThingDef ParentName="CadianUniformBase">
+    <!-- Krieg Uniform -->
+    <defName>KriegUniform</defName>
+    <label>Krieg Uniform</label>
+    <description>A full-body uniform the Death Korps of Krieg most often wear, typically under their armor.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Krieg/Clothing/DeathKorpsUniform</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.70</ToxicSensitivity>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Imperial Guard/Krieg/Clothing/DeathKorpsUniform</wornGraphicPath>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>KriegApparel</li>
+        <li>KriegTrooperApparel</li>
+        <li>KriegGrenadierApparel</li>
+        <li>KriegPickelTrooperApparel</li>
+        <li>KriegTraderApparel</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianUniformBase">
+    <defName>KriegSniperUniform</defName>
+    <label>Krieg Sniper Uniform</label>
+    <description>A full-body uniform the Death Korps of Krieg snipers most often wear, typically under their armor.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Krieg/Clothing/DeathKorpsSniper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <wornGraphicPath>Things/Imperial Guard/Krieg/Clothing/DeathKorpsSniper</wornGraphicPath>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>KriegApparel</li>
+        <li>KriegSniperApparel</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+  <!-- ====== Armors ====== -->
+  <ThingDef ParentName="CadianArmorBase">
+    <!-- Krieg Armour -->
+    <defName>KriegArmor</defName>
+    <label>Krieg Armoured Harness</label>
+    <description>The light armor commonly worn by the Death Korps of Krieg.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Krieg/Belt/DeathKorpsHarness</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>KriegApparel</li>
+        <li>KriegTrooperApparel</li>
+        <li>KriegPickelTrooperApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Imperial Guard/Krieg/Belt/DeathKorpsHarness</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianHeavyArmorBase">
+    <!-- Kasrkin Armour -->
+    <defName>KriegHeavyArmor</defName>
+    <label>Krieg Armor</label>
+    <description>The heavy armour commonly worn by Death Korps of Krieg.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Krieg/Armor/DeathKorpsGrenadier</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>KriegApparel</li>
+        <li>KriegGrenadierApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Imperial Guard/Krieg/Armor/DeathKorpsGrenadier</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <!-- ====== Helmets (Gasmask) ====== -->
+  <ThingDef ParentName="CadianHelmet">
+    <!-- Cadian Helmet -->
+    <defName>KriegHelmet</defName>
+    <label>Krieg Helmet</label>
+    <description>The helmet commonly worn by the Death Korps of Krieg.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Krieg/Hats/DeathKorpsHelmet_normal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.30</ToxicSensitivity>
+    </equippedStatOffsets>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>KriegApparel</li>
+        <li>KriegTrooperApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Imperial Guard/Krieg/Hats/DeathKorpsHelmet_normal</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianHeavyHelmet">
+    <defName>KriegHeavyHelmet</defName>
+    <label>Krieg Helmet (Heavy)</label>
+    <description>A stronger helmet commonly worn by the Death Korps of Krieg genadiers.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Krieg/Hats/DeathKorpsHelmet_Grenadier</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.30</ToxicSensitivity>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Imperial Guard/Krieg/Hats/DeathKorpsHelmet_Grenadier</wornGraphicPath>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>KriegApparel</li>
+        <li>KriegGrenadierApparel</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianHelmet">
+    <defName>KriegSniperHelmet</defName>
+    <label>Krieg Helmet (Sniper)</label>
+    <description>The helmet commonly worn by the Death Korps of Krieg snipers.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Krieg/Hats/DeathKorpsHelmet_Sniper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.30</ToxicSensitivity>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Imperial Guard/Krieg/Hats/DeathKorpsHelmet_Sniper</wornGraphicPath>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>KriegApparel</li>
+        <li>KriegSniperApparel</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianFieldCap">
+    <defName>KriegFieldCap</defName>
+    <label>krieg field cap</label>
+    <description>The field cap commonly worn by the Imperial Guard Death Korps of Krieg regiments.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Krieg/Hats/DeathKorpsSniperFieldcap_normal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>ValhallanApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Imperial Guard/Krieg/Hats/DeathKorpsSniperFieldcap_normal</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianFieldCap">
+    <defName>KriegFieldCapGasmask</defName>
+    <label>krieg field cap (gasmask)</label>
+    <description>The field cap commonly worn by the Imperial Guard Death Korps of Krieg regiments.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Krieg/Hats/DeathKorpsSniperFieldcap_gasmask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.30</ToxicSensitivity>
+    </equippedStatOffsets>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>ValhallanApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Imperial Guard/Valhallan/Hats/DeathKorpsSniperFieldcap_gasmask</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianHelmet">
+    <defName>KriegPickelhaubeGasmask</defName>
+    <label>Krieg Pickelhaube (Gasmask)</label>
+    <description>An uncommon, typically ceremonial helmet worn by the Death Korps of Krieg.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Krieg/Hats/DeathKorpsPickelhaube_Gasmask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.30</ToxicSensitivity>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Imperial Guard/Krieg/Hats/DeathKorpsPickelhaube_Gasmask</wornGraphicPath>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>KriegApparel</li>
+        <li>KriegPickelTrooperApparel</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianHelmet">
+    <defName>KriegPickelhaube</defName>
+    <label>Krieg Pickelhaube</label>
+    <description>An uncommon, typically ceremonial helmet worn by the Death Korps of Krieg.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/Krieg/Hats/DeathKorpsPickelhaube_normal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <wornGraphicPath>Things/Imperial Guard/Krieg/Hats/DeathKorpsPickelhaube_normal</wornGraphicPath>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>KriegApparel</li>
+        <li>KriegTraderApparel</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+  <!-- Ogryn Gear -->
+  <ThingDef ParentName="CadianOgrynFatigues">
+    <defName>OgrynKriegBodysuit</defName>
+    <label>ogryn bodysuit (krieg)</label>
+    <description>Simple clothing worn by Ogryn.</description>
+    <graphicData>
+      <texPath>Things/Ogryn/Krieg/Apparel/DeathKorpsJumpSuit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.70</ToxicSensitivity>
+    </equippedStatOffsets>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>OgrynKriegApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Ogryn/Krieg/Apparel/DeathKorpsJumpSuit</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianOgrynArmor">
+    <defName>OgrynKriegArmor</defName>
+    <label>ogryn armor (krieg)</label>
+    <description>Armor designed for Ogryns, heavy, durable.</description>
+    <graphicData>
+      <texPath>Things/Ogryn/Krieg/Armor/DeathKorpsArmoredHarness</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>OgrynKriegApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Ogryn/Krieg/Armor/DeathKorpsArmoredHarness</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianOgrynHelmet">
+    <defName>OgrynKriegHelmet</defName>
+    <label>ogryn helmet (krieg)</label>
+    <description>A durable helmet built for Ogryn to withstand toxic effects.</description>
+    <graphicData>
+      <texPath>Things/Ogryn/Krieg/Hats/OgrynGasmaskHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>OgrynKriegApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Ogryn/Krieg/Hats/OgrynGasmaskHelmet</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.30</ToxicSensitivity>
+    </equippedStatOffsets>
+  </ThingDef>
+  <ThingDef ParentName="CadianOgrynHelmet">
+    <defName>OgrynKriegPickelhaube</defName>
+    <label>ogryn pickelhaube (krieg)</label>
+    <description>A durable helmet built for Ogryn to withstand toxic effects.</description>
+    <graphicData>
+      <texPath>Things/Ogryn/Krieg/Hats/OgrynGasmaskPickelhaube</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>OgrynKriegApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Ogryn/Krieg/Hats/OgrynGasmaskPickelhaube</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.30</ToxicSensitivity>
+    </equippedStatOffsets>
+  </ThingDef>
+  <ThingDef ParentName="CadianOgrynHelmet">
+    <defName>OgrynKriegGasmask</defName>
+    <label>ogryn gasmask (krieg)</label>
+    <description>A durable gasmask built for Ogryn to withstand toxic effects.</description>
+    <graphicData>
+      <texPath>Things/Ogryn/Krieg/Hats/OgrynGasmask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>OgrynKriegApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Ogryn/Krieg/Hats/OgrynGasmask</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.30</ToxicSensitivity>
+    </equippedStatOffsets>
+  </ThingDef>
+</Defs>

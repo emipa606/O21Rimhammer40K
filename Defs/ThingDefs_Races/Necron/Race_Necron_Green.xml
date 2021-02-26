@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AlienRace.RaceSettings>
+    <defName>NecronGreen_Settings</defName>
+    <pawnKindSettings>
+      <startingColonists>
+        <li>
+          <pawnKindEntries>
+            <li>
+              <kindDefs>
+                <li>NecronOverlordGreen</li>
+              </kindDefs>
+              <chance>20.0</chance>
+            </li>
+            <li>
+              <kindDefs>
+                <li>NecronSpyderGreen</li>
+              </kindDefs>
+              <chance>40.0</chance>
+            </li>
+          </pawnKindEntries>
+          <factionDefs>
+            <li>NecronGreenPlayerColony</li>
+          </factionDefs>
+        </li>
+      </startingColonists>
+      <alienwandererkinds>
+        <li>
+          <pawnKindEntries>
+            <li>
+              <kindDefs>
+                <li>NecronWarriorGreen</li>
+              </kindDefs>
+              <chance>20.0</chance>
+            </li>
+            <li>
+              <kindDefs>
+                <li>NecronDeathmarkGreen</li>
+              </kindDefs>
+              <chance>10.0</chance>
+            </li>
+            <li>
+              <kindDefs>
+                <li>NecronLordGreen</li>
+              </kindDefs>
+              <chance>5.0</chance>
+            </li>
+            <li>
+              <kindDefs>
+                <li>NecronSpyderGreen</li>
+              </kindDefs>
+              <chance>10.0</chance>
+            </li>
+          </pawnKindEntries>
+          <factionDefs>
+            <li>NecronGreenPlayerColony</li>
+          </factionDefs>
+        </li>
+      </alienwandererkinds>
+    </pawnKindSettings>
+  </AlienRace.RaceSettings>
+  <AlienRace.ThingDef_AlienRace ParentName="Alien_Necron">
+    <defName>Alien_NecronWarriorGreen</defName>
+    <label>Necron Warrior</label>
+    <alienRace>
+      <graphicPaths Inherit="False">
+        <li>
+          <head>Things/Necron/Green/Heads/</head>
+          <body>Things/Necron/Green/Body/</body>
+        </li>
+        <li>
+          <lifeStageDefs>
+            <li>HumanlikeAdult</li>
+          </lifeStageDefs>
+        </li>
+      </graphicPaths>
+    </alienRace>
+  </AlienRace.ThingDef_AlienRace>
+  <AlienRace.ThingDef_AlienRace ParentName="Alien_NecronLord">
+    <defName>Alien_NecronLordGreen</defName>
+    <label>Necron Lord</label>
+    <alienRace>
+      <graphicPaths Inherit="false">
+        <li>
+          <head>Things/Necron/Green/Heads/</head>
+          <body>Things/Necron/Green/Body/</body>
+        </li>
+        <li>
+          <lifeStageDefs>
+            <li>HumanlikeAdult</li>
+          </lifeStageDefs>
+        </li>
+      </graphicPaths>
+    </alienRace>
+  </AlienRace.ThingDef_AlienRace>
+  <AlienRace.ThingDef_AlienRace ParentName="Alien_NecronDeathmark">
+    <defName>Alien_NecronDeathmarkGreen</defName>
+    <label>Necron Deathmark</label>
+    <alienRace>
+      <graphicPaths Inherit="false">
+        <li>
+          <head>Things/Necron/Green/Heads/</head>
+          <body>Things/Necron/Green/Body/</body>
+        </li>
+        <li>
+          <lifeStageDefs>
+            <li>HumanlikeAdult</li>
+          </lifeStageDefs>
+        </li>
+      </graphicPaths>
+    </alienRace>
+  </AlienRace.ThingDef_AlienRace>
+  <AlienRace.ThingDef_AlienRace ParentName="Alien_NecronOverlord">
+    <defName>Alien_NecronOverlordGreen</defName>
+    <label>Necron Overlord</label>
+    <alienRace>
+      <graphicPaths Inherit="false">
+        <li>
+          <head>Things/Necron/Green/Heads/</head>
+          <body>Things/Necron/Green/Body/Overlord/</body>
+        </li>
+        <li>
+          <lifeStageDefs>
+            <li>HumanlikeAdult</li>
+          </lifeStageDefs>
+        </li>
+      </graphicPaths>
+    </alienRace>
+  </AlienRace.ThingDef_AlienRace>
+  <AlienRace.ThingDef_AlienRace ParentName="Alien_NecronPariah">
+    <defName>Alien_NecronPariahGreen</defName>
+    <label>Necron Pariah</label>
+    <alienRace>
+      <graphicPaths Inherit="false">
+        <li>
+          <head>Things/Necron/Green/Heads/</head>
+          <body>Things/Necron/Green/Body/Pariah/</body>
+        </li>
+        <li>
+          <lifeStageDefs>
+            <li>HumanlikeAdult</li>
+          </lifeStageDefs>
+        </li>
+      </graphicPaths>
+    </alienRace>
+  </AlienRace.ThingDef_AlienRace>
+</Defs>

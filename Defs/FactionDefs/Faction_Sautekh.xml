@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef Name="FactionSautekhBase">
+    <defName>Sautekh</defName>
+    <label>Sautekh Dynasty</label>
+    <description>In the times before biotransference, the Sautekh Dynasty was ranked as the third most powerful of all the Necrontyr royal dynasties. Through chance or design, many of the Sautekh coreworlds survived the aeons better than those of other dynasties. Now, this Necron dynasty is more powerful than any other in the galaxy, and its nobility is the most aggressive in attempting a new wave of expansion intended to reforge the ancient Necron Empire.</description>
+    <pawnsPlural>Necrons</pawnsPlural>
+    <settlementGenerationWeight>0.1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <earliestRaidDays>100</earliestRaidDays>
+    <canMakeRandomly>True</canMakeRandomly>
+    <autoFlee>false</autoFlee>
+    <canSiege>false</canSiege>
+    <canStageAttacks>false</canStageAttacks>
+    <leaderTitle>Overlord</leaderTitle>
+    <permanentEnemy>true</permanentEnemy>
+    <factionIconPath>World/SautekhBaseIcon</factionIconPath>
+    <settlementTexturePath>World/ZoomedIn_OrkzBase</settlementTexturePath>
+    <colorSpectrum>
+      <li>(1, 1, 1)</li>
+    </colorSpectrum>
+    <fixedName>Sautekh Dynasty</fixedName>
+    <settlementNameMaker>NamerIGCadianBase</settlementNameMaker>
+    <techLevel>Archotech</techLevel>
+    <backstoryCategories>
+      <li>NecronBackstory</li>
+    </backstoryCategories>
+    <hairTags>
+      <li>NecronHair</li>
+    </hairTags>
+    <caravanTraderKinds>
+      <li>Caravan_Outlander_BulkGoods</li>
+      <li>Caravan_Outlander_CombatSupplier</li>
+      <li>Caravan_Outlander_Exotic</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Outlander_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Outlander_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-75</min>
+      <max>60</max>
+    </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <Sautekh_OverlordB>1</Sautekh_OverlordB>
+          <Sautekh_OverlordG>1</Sautekh_OverlordG>
+          <Sautekh_OverlordO>1</Sautekh_OverlordO>
+          <Sautekh_LordB>2</Sautekh_LordB>
+          <Sautekh_LordG>2</Sautekh_LordG>
+          <Sautekh_LordO>2</Sautekh_LordO>
+          <Sautekh_WarriorRB>50</Sautekh_WarriorRB>
+          <Sautekh_WarriorRG>50</Sautekh_WarriorRG>
+          <Sautekh_WarriorRO>50</Sautekh_WarriorRO>
+          <Sautekh_WarriorMB>50</Sautekh_WarriorMB>
+          <Sautekh_WarriorMG>50</Sautekh_WarriorMG>
+          <Sautekh_WarriorMO>50</Sautekh_WarriorMO>
+          <Sautekh_WarriorHB>40</Sautekh_WarriorHB>
+          <Sautekh_WarriorHG>40</Sautekh_WarriorHG>
+          <Sautekh_WarriorHO>40</Sautekh_WarriorHO>
+          <Sautekh_DeathmarkB>20</Sautekh_DeathmarkB>
+          <Sautekh_DeathmarkG>20</Sautekh_DeathmarkG>
+          <Sautekh_DeathmarkO>20</Sautekh_DeathmarkO>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <Sautekh_LordB>2</Sautekh_LordB>
+          <Sautekh_LordG>2</Sautekh_LordG>
+          <Sautekh_LordO>2</Sautekh_LordO>
+          <Sautekh_WarriorRB>50</Sautekh_WarriorRB>
+          <Sautekh_WarriorRG>50</Sautekh_WarriorRG>
+          <Sautekh_WarriorRO>50</Sautekh_WarriorRO>
+          <Sautekh_WarriorMB>50</Sautekh_WarriorMB>
+          <Sautekh_WarriorMG>50</Sautekh_WarriorMG>
+          <Sautekh_WarriorMO>50</Sautekh_WarriorMO>
+          <Sautekh_WarriorHB>40</Sautekh_WarriorHB>
+          <Sautekh_WarriorHG>40</Sautekh_WarriorHG>
+          <Sautekh_WarriorHO>40</Sautekh_WarriorHO>
+          <Sautekh_DeathmarkB>20</Sautekh_DeathmarkB>
+          <Sautekh_DeathmarkG>20</Sautekh_DeathmarkG>
+          <Sautekh_DeathmarkO>20</Sautekh_DeathmarkO>
+        </options>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Sautekh_OverlordB>1</Sautekh_OverlordB>
+          <Sautekh_OverlordG>1</Sautekh_OverlordG>
+          <Sautekh_OverlordO>1</Sautekh_OverlordO>
+          <Sautekh_LordB>6</Sautekh_LordB>
+          <Sautekh_LordG>6</Sautekh_LordG>
+          <Sautekh_LordO>6</Sautekh_LordO>
+          <Sautekh_WarriorRB>50</Sautekh_WarriorRB>
+          <Sautekh_WarriorRG>50</Sautekh_WarriorRG>
+          <Sautekh_WarriorRO>50</Sautekh_WarriorRO>
+          <Sautekh_WarriorMB>50</Sautekh_WarriorMB>
+          <Sautekh_WarriorMG>50</Sautekh_WarriorMG>
+          <Sautekh_WarriorMO>50</Sautekh_WarriorMO>
+          <Sautekh_WarriorHB>40</Sautekh_WarriorHB>
+          <Sautekh_WarriorHG>40</Sautekh_WarriorHG>
+          <Sautekh_WarriorHO>40</Sautekh_WarriorHO>
+          <Sautekh_DeathmarkB>20</Sautekh_DeathmarkB>
+          <Sautekh_DeathmarkG>20</Sautekh_DeathmarkG>
+          <Sautekh_DeathmarkO>20</Sautekh_DeathmarkO>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+</Defs>

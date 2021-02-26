@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+  <identifier>O21Rimhammer40K</identifier>
+  <version>1.0.0.0</version>
+  <dependencies />
+  <incompatibleWith />
+  <loadBefore />
+  <loadAfter />
+  <manifestUri>https://raw.githubusercontent.com/emipa606/O21Rimhammer40K/master/About/Manifest.xml</manifestUri>
+  <downloadUri>https://github.com/emipa606/O21Rimhammer40K/releases</downloadUri>
+</Manifest>
+

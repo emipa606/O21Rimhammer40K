@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef Name="PawnNecronWarriorBase" Abstract="True">
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>NecronLowerBackstory</li>
+          <li>NecronWarriorBackstory</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <combatPower>80</combatPower>
+    <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+  </PawnKindDef>
+  <PawnKindDef Name="PawnNecronDeathmarkBase" Abstract="True">
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>NecronLowerBackstory</li>
+          <li>NecronDeathmarkBackstory</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <combatPower>80</combatPower>
+    <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+  </PawnKindDef>
+  <PawnKindDef Name="PawnNecronLordBase" Abstract="True">
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>NecronHighBackstory</li>
+          <li>NecronLordBackstory</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <combatPower>90</combatPower>
+    <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+  </PawnKindDef>
+  <PawnKindDef Name="PawnNecronOverlordBase" Abstract="True">
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>NecronHighBackstory</li>
+          <li>NecronOverlordBackstory</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <combatPower>100</combatPower>
+    <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+  </PawnKindDef>
+  <PawnKindDef Name="PawnNecronPariahBase" Abstract="True">
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>NecronLowerBackstory</li>
+          <li>NecronWarriorBackstory</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <combatPower>80</combatPower>
+    <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+  </PawnKindDef>
+  <PawnKindDef Name="PawnNecronSpyderBase" Abstract="True">
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>SpyderBackstory</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <combatPower>120</combatPower>
+    <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+  </PawnKindDef>
+</Defs>

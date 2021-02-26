@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <O21Toolbox.Alliances.AllianceDef>
+    <defName>O21_Alliance_Imperium</defName>
+    <label>imperium of man</label>
+    <memberFactions>
+      <li>BlackTemplars</li>
+      <li>BloodRavens</li>
+      <li>Salamanders</li>
+      <li>SpaceWolves</li>
+      <li>Ultramarines</li>
+      <li>IGCadian412</li>
+      <li>CatachanXXV</li>
+      <li>IGKrieg143</li>
+      <li>IGSteelLegion808</li>
+      <li>IGValhallan597</li>
+      <li>MartyredLady</li>
+    </memberFactions>
+    <factionRelations>
+      <li>
+        <faction>TerranPlayerColony</faction>
+        <relation>75</relation>
+      </li>
+      <li>
+        <faction>SororitasPlayerColony</faction>
+        <relation>75</relation>
+      </li>
+      <li>
+        <faction>AstartesPlayerColony</faction>
+        <relation>75</relation>
+      </li>
+    </factionRelations>
+    <allianceRelations>
+      <li>
+        <alliance>O21_Alliance_Tau</alliance>
+        <relation>-100</relation>
+      </li>
+      <li>
+        <alliance>O21_Alliance_Eldar</alliance>
+        <relation>-100</relation>
+      </li>
+      <li>
+        <alliance>O21_Alliance_Ork</alliance>
+        <relation>-100</relation>
+      </li>
+    </allianceRelations>
+  </O21Toolbox.Alliances.AllianceDef>
+</Defs>

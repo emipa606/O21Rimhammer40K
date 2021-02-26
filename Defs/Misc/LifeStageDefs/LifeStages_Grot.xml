@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <LifeStageDef>
+    <defName>TeenGrotStage</defName>
+    <label>Fresh Spawned</label>
+    <visible>false</visible>
+    <reproductive>true</reproductive>
+  </LifeStageDef>
+  <LifeStageDef>
+    <defName>AdultGrotStage</defName>
+    <label>Adult</label>
+    <visible>false</visible>
+    <reproductive>true</reproductive>
+  </LifeStageDef>
+  <LifeStageDef>
+    <defName>ElderGrotStage</defName>
+    <label>Elder</label>
+    <visible>false</visible>
+    <reproductive>true</reproductive>
+  </LifeStageDef>
+  <LifeStageDef>
+    <defName>AncestorGrotStage</defName>
+    <label>Ancestor</label>
+    <visible>false</visible>
+    <reproductive>true</reproductive>
+  </LifeStageDef>
+</Defs>

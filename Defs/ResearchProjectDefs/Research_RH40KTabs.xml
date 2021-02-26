@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchTabDef>
+    <defName>RH40K_Tab0</defName>
+    <label>R40k-IMP1</label>
+  </ResearchTabDef>
+  <!-- <ResearchTabDef> -->
+  <!-- <defName>RH40K_Tab1</defName> -->
+  <!-- <label>R40k-IMP2</label> -->
+  <!-- </ResearchTabDef> -->
+  <ResearchTabDef>
+    <defName>RH40K_Tab2</defName>
+    <label>R40k-ORK</label>
+  </ResearchTabDef>
+  <ResearchTabDef>
+    <defName>RH40K_Tab3</defName>
+    <label>R40k-ELD</label>
+  </ResearchTabDef>
+  <ResearchTabDef>
+    <defName>RH40K_Tab4</defName>
+    <label>R40k-TAU</label>
+  </ResearchTabDef>
+  <ResearchTabDef>
+    <defName>RH40K_Tab5</defName>
+    <label>R40k-NEC</label>
+  </ResearchTabDef>
+  <ResearchTabDef>
+    <defName>RH40K_Tab6</defName>
+    <label>R40k-GSC</label>
+  </ResearchTabDef>
+</Defs>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <O21Toolbox.PawnCrafter.PawnCraftingDef>
+    <defName>PawnCraft_SpyderBlue</defName>
+    <label>Canoptek Spyder</label>
+    <pawnKind>NecronSpyderBlue</pawnKind>
+    <orderID>1</orderID>
+    <costList>
+      <Necrodermis>600</Necrodermis>
+      <GaussCrystalBlue>60</GaussCrystalBlue>
+    </costList>
+    <timeCost>24000</timeCost>
+    <recipeUser>NecronTomb_Blue</recipeUser>
+    <requiredResearch>O21_Nec_Research</requiredResearch>
+  </O21Toolbox.PawnCrafter.PawnCraftingDef>
+  <O21Toolbox.PawnCrafter.PawnCraftingDef>
+    <defName>PawnCraft_NecronWarriorRB</defName>
+    <label>Necron Ranged Warrior</label>
+    <pawnKind>Sautekh_WarriorRB</pawnKind>
+    <orderID>2</orderID>
+    <costList>
+      <Necrodermis>200</Necrodermis>
+      <GaussCrystalBlue>30</GaussCrystalBlue>
+    </costList>
+    <timeCost>15000</timeCost>
+    <recipeUser>NecronTomb_Blue</recipeUser>
+    <requiredResearch>O21_Nec_Research</requiredResearch>
+  </O21Toolbox.PawnCrafter.PawnCraftingDef>
+  <O21Toolbox.PawnCrafter.PawnCraftingDef>
+    <defName>PawnCraft_NecronWarriorMB</defName>
+    <label>Necron Melee Warrior</label>
+    <pawnKind>Sautekh_WarriorMB</pawnKind>
+    <orderID>3</orderID>
+    <costList>
+      <Necrodermis>200</Necrodermis>
+      <GaussCrystalBlue>30</GaussCrystalBlue>
+    </costList>
+    <timeCost>15000</timeCost>
+    <recipeUser>NecronTomb_Blue</recipeUser>
+    <requiredResearch>O21_Nec_Research</requiredResearch>
+  </O21Toolbox.PawnCrafter.PawnCraftingDef>
+  <O21Toolbox.PawnCrafter.PawnCraftingDef>
+    <defName>PawnCraft_NecronWarriorHB</defName>
+    <label>Necron Heavy Warrior</label>
+    <pawnKind>Sautekh_WarriorHB</pawnKind>
+    <orderID>4</orderID>
+    <costList>
+      <Necrodermis>200</Necrodermis>
+      <GaussCrystalBlue>30</GaussCrystalBlue>
+    </costList>
+    <timeCost>15000</timeCost>
+    <recipeUser>NecronTomb_Blue</recipeUser>
+    <requiredResearch>O21_Nec_Research</requiredResearch>
+  </O21Toolbox.PawnCrafter.PawnCraftingDef>
+  <O21Toolbox.PawnCrafter.PawnCraftingDef>
+    <defName>PawnCraft_NecronDeathmarkB</defName>
+    <label>Necron Deathmark</label>
+    <pawnKind>Sautekh_DeathmarkB</pawnKind>
+    <orderID>5</orderID>
+    <timeCost>15000</timeCost>
+    <costList>
+      <Necrodermis>230</Necrodermis>
+      <GaussCrystalBlue>30</GaussCrystalBlue>
+    </costList>
+    <recipeUser>NecronTomb_Blue</recipeUser>
+    <requiredResearch>O21_Nec_Research</requiredResearch>
+  </O21Toolbox.PawnCrafter.PawnCraftingDef>
+  <O21Toolbox.PawnCrafter.PawnCraftingDef>
+    <defName>PawnCraft_NecronLordB</defName>
+    <label>Necron Lord</label>
+    <pawnKind>Sautekh_LordB</pawnKind>
+    <orderID>6</orderID>
+    <timeCost>30000</timeCost>
+    <costList>
+      <Necrodermis>300</Necrodermis>
+      <GaussCrystalBlue>60</GaussCrystalBlue>
+    </costList>
+    <recipeUser>NecronTomb_Blue</recipeUser>
+    <requiredResearch>O21_Nec_Research</requiredResearch>
+  </O21Toolbox.PawnCrafter.PawnCraftingDef>
+</Defs>

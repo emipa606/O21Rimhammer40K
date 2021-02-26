@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Recaf Start -->
+  <ChemicalDef>
+    <defName>O21Recaf</defName>
+    <label>recaf</label>
+    <addictionHediff>O21RecafAddiction</addictionHediff>
+    <toleranceHediff>O21RecafTolerance</toleranceHediff>
+    <canBinge>false</canBinge>
+    <onGeneratedAddictedToleranceChance>0.0</onGeneratedAddictedToleranceChance>
+  </ChemicalDef>
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_O21Recaf</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>recaf</label>
+    <description>Because of a recaf addiction, this person needs to regularly consume it regularly to avoid withdrawal symptoms.</description>
+    <listPriority>100</listPriority>
+  </NeedDef>
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>O21RecafTolerance</defName>
+    <label>recaf tolerance</label>
+    <description>recaf tolerance</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.05</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>O21Recaf</chemical>
+      </li>
+    </comps>
+  </HediffDef>
+  <HediffDef ParentName="AddictionBase">
+    <defName>O21RecafAddiction</defName>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <label>recaf addiction</label>
+    <description>recaf addiction</description>
+    <causesNeed>Chemical_O21Recaf</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.1</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>withdrawal</label>
+        <restFallFactorOffset>0.2</restFallFactorOffset>
+      </li>
+    </stages>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>O21RecafWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>O21RecafAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>recaf withdrawal</label>
+        <description>I'm tired and unfocused. I could do with a cup of recaf</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <!-- Recaf End -->
+</Defs>

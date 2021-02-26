@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>OrkoidSpores</defName>
+    <hediffClass>Rimhammer40k.Orks.HediffOrkSpores</hediffClass>
+    <label>Orkoid Spores</label>
+    <description>Orkoid Spores</description>
+    <defaultLabelColor>(0.6,0.6,0.95)</defaultLabelColor>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <capMods />
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>OrkoidHealing</defName>
+    <hediffClass>O21Toolbox.AutoHeal.Hediff_AutoHeal</hediffClass>
+    <label>Orkoid Healing</label>
+    <description>Orkoid Healing</description>
+    <defaultLabelColor>(0.6,0.6,0.95)</defaultLabelColor>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <capMods />
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="O21Toolbox.AutoHeal.DefModExtension_AutoHealProps">
+        <healTicks>3000</healTicks>
+        <growthText>Growth: </growthText>
+        <protoBodyPart>OrkProtoBodypart</protoBodyPart>
+        <curedBodyPart>OrkCuredBodypart</curedBodyPart>
+      </li>
+    </modExtensions>
+  </HediffDef>
+  <HediffDef>
+    <defName>OrkProtoBodypart</defName>
+    <label>regrowing</label>
+    <description>regrowing</description>
+    <hediffClass>O21Toolbox.AutoHeal.Hediff_GrowingPart</hediffClass>
+    <defaultLabelColor>(0.59, 0.92, 0.69)</defaultLabelColor>
+    <isBad>false</isBad>
+    <addedPartProps>
+      <partEfficiency>0.1</partEfficiency>
+    </addedPartProps>
+    <initialSeverity>0.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <painOffset>0.2</painOffset>
+      </li>
+      <li>
+        <minSeverity>0.3</minSeverity>
+        <painOffset>0.15</painOffset>
+      </li>
+      <li>
+        <minSeverity>0.6</minSeverity>
+        <painOffset>0.1</painOffset>
+      </li>
+      <li>
+        <minSeverity>0.9</minSeverity>
+        <painOffset>0.05</painOffset>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>0.07</severityPerDayNotImmune>
+        <!-- 0.07 is roughly a Quadrum (15 days) -->
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="O21Toolbox.AutoHeal.DefModExtension_AutoHealProps">
+        <autoHealHediff>OrkoidHealing</autoHealHediff>
+      </li>
+    </modExtensions>
+  </HediffDef>
+  <HediffDef>
+    <defName>OrkCuredBodypart</defName>
+    <label>cured bodypart</label>
+    <description>cured bodypart</description>
+    <hediffClass>O21Toolbox.Utility.RemovableHediff</hediffClass>
+    <defaultLabelColor>(1.0, 1.0, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <initialSeverity>0.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

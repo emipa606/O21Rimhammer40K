@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ====== Clothing ====== -->
+  <ThingDef ParentName="CadianUniformBase">
+    <!-- Krieg Uniform -->
+    <defName>SteelLegionUniform</defName>
+    <label>Steel Legion Uniform</label>
+    <description>A full-body uniform the Armageddon Steel Legion most often wear, typically under their armor.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/SteelLegion/Clothing/SteelLegionUniform_normal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.70</ToxicSensitivity>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Imperial Guard/SteelLegion/Clothing/SteelLegionUniform_normal</wornGraphicPath>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>SteelLegionApparel</li>
+        <li>SteelLegionTrooperApparel</li>
+        <li>SteelLegionTraderApparel</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianUniformBase">
+    <defName>SteelLegionCamoUniform</defName>
+    <label>Steel Legion Uniform (Camo)</label>
+    <description>A full-body camo uniform the Steel Legion most often wear, typically under their armor.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/SteelLegion/Clothing/SteelLegionUniform_Camo</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <wornGraphicPath>Things/Imperial Guard/SteelLegion/Clothing/SteelLegionUniform_Camo</wornGraphicPath>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>SteelLegionApparel</li>
+        <li>SteelLegionCamoApparel</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+  <!-- ====== Armors ====== -->
+  <ThingDef ParentName="CadianArmorBase">
+    <defName>SteelLegionArmor</defName>
+    <label>Steel Legion Harness</label>
+    <description>The light harness commonly worn by the Steel Legion.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/SteelLegion/Belt/SteelLegionHarness</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>SteelLegionApparel</li>
+        <li>SteelLegionTrooperApparel</li>
+        <li>SteelLegionCamoApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Imperial Guard/SteelLegion/Belt/SteelLegionHarness</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <!-- ====== Helmets (Gasmask) ====== -->
+  <ThingDef ParentName="CadianHelmet">
+    <!-- Cadian Helmet -->
+    <defName>SteelLegionHelmet</defName>
+    <label>Steel Legion Helmet</label>
+    <description>The helmet commonly worn by the Steel Legion.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/SteelLegion/Hats/SteelLegionHelmet_normal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>SteelLegionApparel</li>
+        <li>SteelLegionTrooperApparel</li>
+        <li>SteelLegionCamoApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Imperial Guard/SteelLegion/Hats/SteelLegionHelmet_normal</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianHelmet">
+    <defName>SteelLegionHelmetGasmask</defName>
+    <label>Steel Legion Helmet (Gasmask)</label>
+    <techLevel>Spacer</techLevel>
+    <description>The helmet commonly worn by the Steel Legion, includes gasmask.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/SteelLegion/Hats/SteelLegionHelmet_Gasmask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.30</ToxicSensitivity>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Imperial Guard/SteelLegion/Hats/SteelLegionHelmet_Gasmask</wornGraphicPath>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>SteelLegionApparel</li>
+        <li>SteelLegionTrooperApparel</li>
+        <li>SteelLegionCamoApparel</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianHelmet">
+    <defName>SteelLegionOfficerHelmet</defName>
+    <label>Steel Legion Officer Helmet</label>
+    <description>A stronger helmet commonly worn by the Steel Legion officers.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/SteelLegion/Hats/SteelLegionHelmet_Officer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>O21_Imp_IGHeavyArmor</researchPrerequisite>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+      <MaxHitPoints>400</MaxHitPoints>
+      <MarketValue>300</MarketValue>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.74</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.42</ArmorRating_Heat>
+    </statBases>
+    <apparel>
+      <wornGraphicPath>Things/Imperial Guard/SteelLegion/Hats/SteelLegionHelmet_Officer</wornGraphicPath>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>SteelLegionApparel</li>
+        <li>SteelLegionOfficerApparel</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianHelmet">
+    <defName>SteelLegionOfficerGasmaskHelmet</defName>
+    <label>Steel Legion Officer Gasmask Helmet</label>
+    <description>A stronger helmet commonly worn by the Steel Legion officers, includes gasmask.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/SteelLegion/Hats/SteelLegionHelmet_OfficerGasmask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>O21_Imp_IGHeavyArmor</researchPrerequisite>
+    </recipeMaker>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.30</ToxicSensitivity>
+    </equippedStatOffsets>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+      <MaxHitPoints>400</MaxHitPoints>
+      <MarketValue>300</MarketValue>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.74</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.42</ArmorRating_Heat>
+    </statBases>
+    <apparel>
+      <wornGraphicPath>Things/Imperial Guard/SteelLegion/Hats/SteelLegionHelmet_OfficerGasmask</wornGraphicPath>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>SteelLegionApparel</li>
+        <li>SteelLegionOfficerApparel</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianFieldCap">
+    <defName>SteelLegionCap</defName>
+    <label>Steel Legion Fieldcap</label>
+    <description>A hat commonly worn by the Armageddon Steel Legion regiments.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/SteelLegion/Hats/SteelLegionCap_normal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <wornGraphicPath>Things/Imperial Guard/SteelLegion/Hats/SteelLegionCap_normal</wornGraphicPath>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>SteelLegionApparel</li>
+        <li>SteelLegionTrooperApparel</li>
+        <li>SteelLegionTraderApparel</li>
+      </tags>
+    </apparel>
+    <costList Inherit="false">
+      <Cloth>20</Cloth>
+      <CeramiteLowGrade>5</CeramiteLowGrade>
+    </costList>
+    <statBases Inherit="False">
+      <Mass>1.8</Mass>
+      <WorkToMake>16000</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <MarketValue>100</MarketValue>
+      <Insulation_Cold>0.5</Insulation_Cold>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="CadianHelmet">
+    <defName>SteelLegionCapGasmask</defName>
+    <label>Steel Legion Fieldcap (gasmask)</label>
+    <description>A hat commonly worn by the Armageddon Steel Legion regiments, includes gasmask.</description>
+    <graphicData>
+      <texPath>Things/Imperial Guard/SteelLegion/Hats/SteelLegionCap_Gasmask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.30</ToxicSensitivity>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Imperial Guard/SteelLegion/Hats/SteelLegionCap_Gasmask</wornGraphicPath>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>SteelLegionApparel</li>
+        <li>SteelLegionTrooperApparel</li>
+        <li>SteelLegionTraderApparel</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+  <!-- Ogryn Gear -->
+  <ThingDef ParentName="CadianOgrynFatigues">
+    <defName>OgrynSteelLegionBodysuit</defName>
+    <label>ogryn bodysuit (steel legion)</label>
+    <description>Simple clothing worn by Ogryn.</description>
+    <graphicData>
+      <texPath>Things/Ogryn/SteelLegion/Apparel/SteelLegionJumpSuit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.70</ToxicSensitivity>
+    </equippedStatOffsets>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>OgrynSteelLegionApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Ogryn/SteelLegion/Apparel/SteelLegionJumpSuit</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianOgrynArmor">
+    <defName>OgrynSteelLegionArmor</defName>
+    <label>ogryn armor (steel legion)</label>
+    <description>Armor designed for Ogryns, heavy, durable.</description>
+    <graphicData>
+      <texPath>Things/Ogryn/SteelLegion/Armor/SteelLegionHarness</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>OgrynSteelLegionApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Ogryn/SteelLegion/Armor/SteelLegionHarness</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CadianOgrynHelmet">
+    <defName>OgrynSteelLegionGasmask</defName>
+    <label>ogryn gasmask (steel legion)</label>
+    <description>A durable gasmask built for Ogryn to withstand toxic effects.</description>
+    <graphicData>
+      <texPath>Things/Ogryn/SteelLegion/Hats/OgrynSteelLegionGasmask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <apparel>
+      <tags Inherit="False">
+        <li>ImperialGuardApparel</li>
+        <li>OgrynSteelLegionApparel</li>
+      </tags>
+      <wornGraphicPath>Things/Ogryn/SteelLegion/Hats/OgrynSteelLegionGasmask</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <ToxicSensitivity>-0.30</ToxicSensitivity>
+    </equippedStatOffsets>
+  </ThingDef>
+</Defs>

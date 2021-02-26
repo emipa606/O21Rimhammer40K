@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>Necrodermis</defName>
+    <label>necrodermis</label>
+    <description>Material made by Necrons from raw gauss energy, used to craft almost everything made by them, including their own bodies.</description>
+    <graphicData>
+      <texPath>Things/Resource/Necrodermis</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(255, 255, 255)</color>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <Mass>0.1</Mass>
+      <MarketValue>10</MarketValue>
+      <StuffPower_Armor_Sharp>1.26</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.63</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.08</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.9</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <smeltable>true</smeltable>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.05</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(30, 30, 30)</color>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>6.2</MaxHitPoints>
+        <Beauty>1</Beauty>
+        <Flammability>0</Flammability>
+        <WorkToMake>2.2</WorkToMake>
+        <WorkToBuild>2.2</WorkToBuild>
+        <MeleeWeapon_CooldownMultiplier>1.0</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+    </stuffProps>
+    <deepCommonality>0.05</deepCommonality>
+    <deepCountPerPortion>7</deepCountPerPortion>
+    <deepLumpSizeRange>
+      <min>2</min>
+      <max>10</max>
+    </deepLumpSizeRange>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase" Name="GaussCrystalBase">
+    <defName>GaussCrystalGreen</defName>
+    <label>gauss crystal (green)</label>
+    <description>Energy filled crystals that seem to grow by some unknown means, heavily used by Necrons in production of their equipment, buildings and even creating their energy sources.</description>
+    <graphicData>
+      <texPath>Things/Resource/GaussCrystal</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(0, 255, 0)</color>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <statBases>
+      <WorkToMake>4000</WorkToMake>
+      <Mass>0.1</Mass>
+      <MarketValue>5</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(0, 255, 0, 0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="GaussCrystalBase">
+    <defName>GaussCrystalBlue</defName>
+    <label>gauss crystal (blue)</label>
+    <graphicData>
+      <texPath>Things/Resource/GaussCrystal</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(0, 195, 255)</color>
+    </graphicData>
+    <comps Inherit="False">
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(0, 195, 255, 0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="GaussCrystalBase">
+    <defName>GaussCrystalOrange</defName>
+    <label>gauss crystal (orange)</label>
+    <graphicData>
+      <texPath>Things/Resource/GaussCrystal</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(255, 157, 0)</color>
+    </graphicData>
+    <comps Inherit="False">
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(255, 157, 0, 0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- <ThingDef ParentName="ResourceBase">
+		<defName>InactiveScarab</defName>
+		<label>inactive scarab</label>
+		<description>Canoptek scarab, installed in a Scarab Platform to activate it. 
+[CURRENTLY NOT USED, WILL HAVE FUNCTION IN FUTURE]</description>
+		<graphicData>
+			<texPath>Things/Necron/Constructs/Scarab/Stack/Necron_Scarab</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(255, 255, 255)</color>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<WorkToMake>3000</WorkToMake>
+			<Mass>0.1</Mass>
+			<MarketValue>600</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<deepCommonality>0.005</deepCommonality>
+		<deepCountPerPortion>1</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>1</min>
+			<max>2</max>
+		</deepLumpSizeRange>
+		<costList>
+			<Necrodermis>25</Necrodermis>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>O21_Nec_Research</researchPrerequisite>
+			<recipeUsers>
+				<li>NecronFabricationAltar</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef> -->
+  <ThingDef ParentName="ResourceBase" Name="GaussCellBase">
+    <defName>O21_NecronGaussCell_Green</defName>
+    <label>gauss cell (green)</label>
+    <description>Consumable cells of energy used by Necrons to recharge. Colour is irellevant other than determining colour of crytsals used to craft.</description>
+    <graphicData>
+      <texPath>Things/Necron/Item/GaussCell/Green</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>10</MarketValue>
+      <Mass>0.025</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>0.3</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>O21_Nec_Research</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <effectWorking>Cook</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <workAmount>800</workAmount>
+      <targetCountAdjustment>5</targetCountAdjustment>
+      <productCount>5</productCount>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>NecronFabricationAltar</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Necrodermis>2</Necrodermis>
+      <GaussCrystalGreen>10</GaussCrystalGreen>
+    </costList>
+    <comps>
+      <li Class="O21Toolbox.Needs.CompProperties_EnergySource">
+        <isConsumable>true</isConsumable>
+        <energyWhenConsumed>0.80</energyWhenConsumed>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(0, 255, 0, 0)</glowColor>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+  <ThingDef ParentName="GaussCellBase">
+    <defName>O21_NecronGaussCell_Blue</defName>
+    <label>gauss cell (blue)</label>
+    <graphicData>
+      <texPath>Things/Necron/Item/GaussCell/Blue</texPath>
+    </graphicData>
+    <costList Inherit="False">
+      <Necrodermis>2</Necrodermis>
+      <GaussCrystalBlue>10</GaussCrystalBlue>
+    </costList>
+    <comps Inherit="False">
+      <li Class="O21Toolbox.Needs.CompProperties_EnergySource">
+        <isConsumable>true</isConsumable>
+        <energyWhenConsumed>0.80</energyWhenConsumed>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(0, 255, 0, 0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="GaussCellBase">
+    <defName>O21_NecronGaussCell_Orange</defName>
+    <label>gauss cell (orange)</label>
+    <graphicData>
+      <texPath>Things/Necron/Item/GaussCell/Orange</texPath>
+    </graphicData>
+    <costList Inherit="False">
+      <Necrodermis>2</Necrodermis>
+      <GaussCrystalOrange>10</GaussCrystalOrange>
+    </costList>
+    <comps Inherit="False">
+      <li Class="O21Toolbox.Needs.CompProperties_EnergySource">
+        <isConsumable>true</isConsumable>
+        <energyWhenConsumed>0.80</energyWhenConsumed>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(255, 157, 0, 0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedScarab</defName>
+    <label>unfinished scarab</label>
+    <graphicData>
+      <texPath>Things/Necron/Constructs/Scarab/Stack/Necron_Scarab</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(255, 255, 255)</color>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <stuffCategories Inherit="false" />
+  </ThingDef>
+</Defs>
