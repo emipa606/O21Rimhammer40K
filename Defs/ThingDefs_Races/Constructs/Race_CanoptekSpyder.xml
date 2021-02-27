@@ -237,7 +237,7 @@
       </ageGenerationCurve>
       <hediffGiverSets>
         <li>NecronBasic</li>
-        <li>O21_Construct</li>
+        <li>O21_ConstructHumanoid</li>
       </hediffGiverSets>
     </race>
     <butcherProducts>

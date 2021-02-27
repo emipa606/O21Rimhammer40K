@@ -5,7 +5,7 @@
     <label>small canoptek scarab</label>
     <description>A small Necron Canoptek Scarab, they wander around aimlessly till they aquire a target.</description>
     <graphicData>
-      <texPath>Things/Necron/Constructs/Scarab/Necron_Scarab</texPath>
+      <texPath>Things/Necron/Constructs/Scarab/Green/Necron_Scarab</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>0.8</drawSize>
       <shadowData>
@@ -89,7 +89,7 @@
     <label>canoptek scarab</label>
     <description>A Necron Canoptek Scarab, they wander around aimlessly till they are given work to do. They will passively produce Necrodermis as a byproduct of consuming biomass, which needs to be collected from them.</description>
     <graphicData>
-      <texPath>Things/Necron/Constructs/Scarab/Necron_Scarab</texPath>
+      <texPath>Things/Necron/Constructs/Scarab/Green/Necron_Scarab</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>1.0</drawSize>
       <shadowData>
@@ -184,7 +184,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Necron/Constructs/Scarab/Necron_Scarab</texPath>
+          <texPath>Things/Necron/Constructs/Scarab/Green/Necron_Scarab</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1</drawSize>
           <shadowData>
@@ -249,7 +249,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Necron/Constructs/Scarab/Necron_Scarab</texPath>
+          <texPath>Things/Necron/Constructs/Scarab/Green/Necron_Scarab</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1</drawSize>
           <shadowData>
