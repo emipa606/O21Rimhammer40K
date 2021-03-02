@@ -13,7 +13,7 @@ namespace O21Toolbox.PawnConverter
         /// <summary>
         ///     Recipe chosen for converting pawn.
         /// </summary>
-        public PawnConvertingDef chosenRecipe = null;
+        public PawnConvertingDef chosenRecipe;
 
         /// <summary>
         ///     Ticks left until pawn is finished converting.
@@ -73,7 +73,7 @@ namespace O21Toolbox.PawnConverter
                 }
 
                 return ((float) converterProperties.ticksToConvert - conversionTicksLeft) /
-                       (float) converterProperties.ticksToConvert;
+                       converterProperties.ticksToConvert;
             }
         }
 
@@ -104,11 +104,6 @@ namespace O21Toolbox.PawnConverter
             powerComp = GetComp<CompPowerTrader>();
             flickableComp = GetComp<CompFlickable>();
             converterProperties = def.GetModExtension<ConverterProperties>();
-        }
-
-        public override void PostMake()
-        {
-            base.PostMake();
         }
 
         public override void ExposeData()
@@ -162,98 +157,105 @@ namespace O21Toolbox.PawnConverter
                 };
             }
 
-            if (!HasAnyContents)
+            if (HasAnyContents)
             {
-                var floatMenuOptions = new List<FloatMenuOption>();
-                foreach (PawnConvertingDef def in DefDatabase<PawnConvertingDef>.AllDefs.OrderBy(def => def.orderID))
+                return null;
+            }
+
+            var floatMenuOptions = new List<FloatMenuOption>();
+            foreach (var convertingDef in DefDatabase<PawnConvertingDef>.AllDefs.OrderBy(pawnConvertingDef =>
+                pawnConvertingDef.orderID))
+            {
+                if (convertingDef.recipeUsers == null || !convertingDef.recipeUsers.Any(x => x == def.defName))
                 {
-                    if (def.recipeUsers != null && def.recipeUsers.Any(x => x == this.def.defName))
+                    continue;
+                }
+
+                var disabled = false;
+                var reason = 0;
+                string labelText;
+                // Check research
+                if (convertingDef.requiredResearch != null && !convertingDef.requiredResearch.IsFinished)
+                {
+                    disabled = true;
+                    reason = 0;
+                }
+
+                // Check input Race
+                if (!Util_PawnConvert.IsViableRace(myPawn, convertingDef))
+                {
+                    disabled = true;
+                    reason = 1;
+                }
+
+                // Check input Sex
+                if (!Util_PawnConvert.IsRequiredSex(myPawn, convertingDef))
+                {
+                    disabled = true;
+                    reason = 2;
+                }
+
+                // Check input hediffs
+                if (!HasRequiredHediffs(myPawn, convertingDef))
+                {
+                    disabled = true;
+                    reason = 3;
+                }
+
+                // If disabled, say why.
+                if (disabled)
+                {
+                    switch (reason)
                     {
-                        var disabled = false;
-                        var reason = 0;
-                        var labelText = "";
-                        // Check research
-                        if (def.requiredResearch != null && !def.requiredResearch.IsFinished)
-                        {
-                            disabled = true;
-                            reason = 0;
-                        }
-
-                        // Check input Race
-                        if (!Util_PawnConvert.IsViableRace(myPawn, def))
-                        {
-                            disabled = true;
-                            reason = 1;
-                        }
-
-                        // Check input Sex
-                        if (!Util_PawnConvert.IsRequiredSex(myPawn, def))
-                        {
-                            disabled = true;
-                            reason = 2;
-                        }
-
-                        // Check input hediffs
-                        if (!HasRequiredHediffs(myPawn, def))
-                        {
-                            disabled = true;
-                            reason = 3;
-                        }
-
-                        // If disabled, say why.
-                        if (disabled)
-                        {
-                            switch (reason)
-                            {
-                                case 0:
-                                    labelText = "PawnConverterNeedsResearch".Translate(def.label,
-                                        def.requiredResearch.LabelCap);
-                                    break;
-                                case 1:
-                                    labelText = "PawnConverterInvalidRace".Translate(def.label);
-                                    break;
-                                case 2:
-                                    labelText = "PawnConverterInvalidGender".Translate(def.label);
-                                    break;
-                                case 3:
-                                    labelText = "PawnConverterInvalidHediffs".Translate(def.label);
-                                    break;
-                                default:
-                                    labelText = "PawnConverterNeedsResearch".Translate(def.label,
-                                        def.requiredResearch.LabelCap);
-                                    break;
-                            }
-                        }
-                        else
-                        {
-                            labelText = "PawnConverterConvert".Translate(def.label);
-                        }
-
-                        var option = new FloatMenuOption(labelText,
-                            delegate
-                            {
-                                if (!disabled)
-                                {
-                                    var val2 = new Job(ConverterDefOf.EnterConverter, this);
-                                    myPawn.Reserve(this, val2);
-                                    myPawn.jobs.TryTakeOrderedJob(val2);
-                                    chosenRecipe = def;
-                                    ICookingTime = chosenRecipe.conversionTime;
-                                }
-                            });
-
-                        option.Disabled = disabled;
-                        floatMenuOptions.Add(option);
+                        case 0:
+                            labelText = "PawnConverterNeedsResearch".Translate(convertingDef.label,
+                                convertingDef.requiredResearch.LabelCap);
+                            break;
+                        case 1:
+                            labelText = "PawnConverterInvalidRace".Translate(convertingDef.label);
+                            break;
+                        case 2:
+                            labelText = "PawnConverterInvalidGender".Translate(convertingDef.label);
+                            break;
+                        case 3:
+                            labelText = "PawnConverterInvalidHediffs".Translate(convertingDef.label);
+                            break;
+                        default:
+                            labelText = "PawnConverterNeedsResearch".Translate(convertingDef.label,
+                                convertingDef.requiredResearch.LabelCap);
+                            break;
                     }
                 }
-
-                if (floatMenuOptions.Count > 0)
+                else
                 {
-                    return floatMenuOptions;
+                    labelText = "PawnConverterConvert".Translate(convertingDef.label);
                 }
 
-                //Old Shit
-                /** FloatMenuOption item6 = new FloatMenuOption(Translator.Translate("EnterConverter"), (Action)delegate
+                var option = new FloatMenuOption(labelText,
+                    delegate
+                    {
+                        if (disabled)
+                        {
+                            return;
+                        }
+
+                        var val2 = new Job(ConverterDefOf.EnterConverter, this);
+                        myPawn.Reserve(this, val2);
+                        myPawn.jobs.TryTakeOrderedJob(val2);
+                        chosenRecipe = convertingDef;
+                        ICookingTime = chosenRecipe.conversionTime;
+                    }) {Disabled = disabled};
+
+                floatMenuOptions.Add(option);
+            }
+
+            if (floatMenuOptions.Count > 0)
+            {
+                return floatMenuOptions;
+            }
+
+            //Old Shit
+            /** FloatMenuOption item6 = new FloatMenuOption(Translator.Translate("EnterConverter"), (Action)delegate
                 {
                     Job val2 = new Job(ConverterDefOf.EnterConverter, this);
                     ReservationUtility.Reserve(myPawn, this, val2);
@@ -263,45 +265,48 @@ namespace O21Toolbox.PawnConverter
                 {
                     item6
                 }; **/
-            }
 
             return null;
         }
 
-        public bool HasRequiredHediffs(Pawn pawn, PawnConvertingDef recipe)
+        private bool HasRequiredHediffs(Pawn pawn, PawnConvertingDef recipe)
         {
             if (recipe.requiredHediffs == null)
             {
                 return true;
             }
 
-            if (recipe.requiredHediffs.All(x => pawn.health.hediffSet.HasHediff(x, false)))
+            if (!recipe.requiredHediffs.All(x => pawn.health.hediffSet.HasHediff(x)))
             {
-                if (recipe.hediffSeverityMatters)
-                {
-                    IEnumerable<HediffDef> enumerable = from def in recipe.requiredHediffs
-                        where pawn.health.hediffSet.HasHediff(def)
-                        select def;
-                    foreach (var current in enumerable)
-                    {
-                        if (pawn.health.hediffSet.GetFirstHediffOfDef(current) != null)
-                        {
-                            if (pawn.health.hediffSet.GetFirstHediffOfDef(current).Severity <
-                                recipe.requiredHediffSeverity)
-                            {
-                                return false;
-                            }
-                        }
-                    }
-                }
+                return false;
+            }
 
+            if (!recipe.hediffSeverityMatters)
+            {
                 return true;
             }
 
-            return false;
+            var enumerable = from def in recipe.requiredHediffs
+                where pawn.health.hediffSet.HasHediff(def)
+                select def;
+            foreach (var current in enumerable)
+            {
+                if (pawn.health.hediffSet.GetFirstHediffOfDef(current) == null)
+                {
+                    continue;
+                }
+
+                if (pawn.health.hediffSet.GetFirstHediffOfDef(current).Severity <
+                    recipe.requiredHediffSeverity)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
-        public void CookIt()
+        private void CookIt()
         {
             ThingOwner convertedContainer = new ThingOwner<Thing>();
             foreach (var item in innerContainer)
@@ -346,28 +351,34 @@ namespace O21Toolbox.PawnConverter
                 }
             }
 
-            if (!converterProperties.requiresPower)
+            if (converterProperties.requiresPower)
             {
-                if (HasAnyContents)
-                {
-                    //Not the best way but this just ticks up until max is reached.
-                    //It would be better to check the "endtime" with the Tickfinder
-                    ICookingTicking++;
-                    if (ICookingTicking >= ICookingTime)
-                    {
-                        CookIt();
-                        EjectContents();
-                        ICookingTicking = 0;
-                    }
-                }
+                return;
             }
+
+            if (!HasAnyContents)
+            {
+                return;
+            }
+
+            //Not the best way but this just ticks up until max is reached.
+            //It would be better to check the "endtime" with the Tickfinder
+            ICookingTicking++;
+            if (ICookingTicking < ICookingTime)
+            {
+                return;
+            }
+
+            CookIt();
+            EjectContents();
+            ICookingTicking = 0;
         }
 
         public override void EjectContents()
         {
             if (!Destroyed)
             {
-                SoundStarter.PlayOneShot(converterProperties.finishingSound, SoundInfo.OnCamera());
+                converterProperties.finishingSound.PlayOneShot(SoundInfo.OnCamera());
             }
 
             ICookingTicking = 0;
@@ -384,7 +395,7 @@ namespace O21Toolbox.PawnConverter
             }
         }
 
-        public void DrawTimerBar()
+        private void DrawTimerBar()
         {
             //Replaced Drawhelper with vanilla drawer here
             var fillableBarRequest = default(GenDraw.FillableBarRequest);
@@ -427,17 +438,17 @@ namespace O21Toolbox.PawnConverter
 
         public override bool TryAcceptThing(Thing thing, bool allowSpecialEffects = true)
         {
-            if (base.TryAcceptThing(thing, allowSpecialEffects))
+            if (!base.TryAcceptThing(thing, allowSpecialEffects))
             {
-                if (allowSpecialEffects)
-                {
-                    SoundDef.Named("CryptosleepCasketAccept").PlayOneShot(new TargetInfo(Position, Map));
-                }
-
-                return true;
+                return false;
             }
 
-            return false;
+            if (allowSpecialEffects)
+            {
+                SoundDef.Named("CryptosleepCasketAccept").PlayOneShot(new TargetInfo(Position, Map));
+            }
+
+            return true;
         }
 
         public static Building_Converter FindConverterFor(Pawn p, Pawn traveler, bool ignoreOtherReservations = false)

@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using AlienRace;
-using MonoMod.Utils;
 using O21Toolbox.Utility;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace O21Toolbox.PawnConverter
@@ -11,12 +11,14 @@ namespace O21Toolbox.PawnConverter
     {
         public static bool IsRequiredSex(Pawn pawn, PawnConvertingDef recipe)
         {
-            if (recipe.requiredSex != null)
+            if (recipe.requiredSex == null)
             {
-                if (recipe.requiredSex != pawn.gender.ToString())
-                {
-                    return false;
-                }
+                return true;
+            }
+
+            if (recipe.requiredSex != pawn.gender.ToString())
+            {
+                return false;
             }
 
             return true;
@@ -24,12 +26,14 @@ namespace O21Toolbox.PawnConverter
 
         public static bool IsViableRace(Pawn pawn, PawnConvertingDef recipe)
         {
-            if (recipe.inputDefs != null)
+            if (recipe.inputDefs == null)
             {
-                if (!recipe.inputDefs.Contains(pawn.def))
-                {
-                    return false;
-                }
+                return true;
+            }
+
+            if (!recipe.inputDefs.Contains(pawn.def))
+            {
+                return false;
             }
 
             return true;
@@ -101,10 +105,7 @@ namespace O21Toolbox.PawnConverter
 
             if (recipe.makeFriendly)
             {
-                if (pawn.guest != null)
-                {
-                    pawn.guest.SetGuestStatus(null);
-                }
+                pawn.guest?.SetGuestStatus(null);
 
                 if (pawn.Faction != Faction.OfPlayer)
                 {
@@ -147,7 +148,12 @@ namespace O21Toolbox.PawnConverter
                 var equipment = pawnToConvert.equipment.GetDirectlyHeldThings().ToList();
                 foreach (var eq in equipment)
                 {
-                    if (eq != null)
+                    if (eq == null)
+                    {
+                        continue;
+                    }
+
+                    if (pawn?.equipment != null)
                     {
                         pawnToConvert.equipment.GetDirectlyHeldThings()
                             .TryTransferToContainer(eq, pawn.equipment.GetDirectlyHeldThings());
@@ -157,7 +163,12 @@ namespace O21Toolbox.PawnConverter
                 var apparels = pawnToConvert.apparel.GetDirectlyHeldThings().ToList();
                 foreach (var ap in apparels)
                 {
-                    if (ap != null)
+                    if (ap == null)
+                    {
+                        continue;
+                    }
+
+                    if (pawn?.apparel != null)
                     {
                         pawnToConvert.apparel.GetDirectlyHeldThings()
                             .TryTransferToContainer(ap, pawn.apparel.GetDirectlyHeldThings());
@@ -167,7 +178,12 @@ namespace O21Toolbox.PawnConverter
                 var items = pawnToConvert.inventory.GetDirectlyHeldThings().ToList();
                 foreach (var item in items)
                 {
-                    if (item != null)
+                    if (item == null)
+                    {
+                        continue;
+                    }
+
+                    if (pawn?.equipment != null)
                     {
                         pawnToConvert.inventory.GetDirectlyHeldThings()
                             .TryTransferToContainer(item, pawn.equipment.GetDirectlyHeldThings());
@@ -180,37 +196,42 @@ namespace O21Toolbox.PawnConverter
 
         public static Pawn TransferStory(Pawn newPawn, Pawn oldPawn, PawnConvertingDef recipe)
         {
-            if (oldPawn.TryGetComp<AlienPartGenerator.AlienComp>() != null &&
-                newPawn.TryGetComp<AlienPartGenerator.AlienComp>() != null)
+            if (oldPawn.TryGetComp<AlienPartGenerator.AlienComp>() == null ||
+                newPawn.TryGetComp<AlienPartGenerator.AlienComp>() == null)
             {
-                newPawn.story.childhood = oldPawn.story.childhood;
-                newPawn.story.adulthood = oldPawn.story.adulthood;
-                newPawn.story.title = oldPawn.story.title;
-                newPawn.story.traits = oldPawn.story.traits;
-                if (recipe.forcedHead == null)
-                {
-                    newPawn.story.crownType = oldPawn.story.crownType;
-                }
-
-                if (!recipe.forcedSkinColor && !recipe.randomSkinColor)
-                {
-                    newPawn.TryGetComp<AlienPartGenerator.AlienComp>().ColorChannels.Clear();
-                    newPawn.TryGetComp<AlienPartGenerator.AlienComp>().ColorChannels
-                        .AddRange(oldPawn.TryGetComp<AlienPartGenerator.AlienComp>().ColorChannels);
-                }
-
-                if (!recipe.randomHair && recipe.forcedHair == null)
-                {
-                    newPawn.story.hairDef = oldPawn.story.hairDef;
-                }
-
-                if (!recipe.randomHairColor && !recipe.forcedHairColor)
-                {
-                    newPawn.story.hairColor = oldPawn.story.hairColor;
-                }
-
-                newPawn.Drawer.renderer.graphics.ResolveAllGraphics();
+                return newPawn;
             }
+
+            newPawn.story.childhood = oldPawn.story.childhood;
+            newPawn.story.adulthood = oldPawn.story.adulthood;
+            newPawn.story.title = oldPawn.story.title;
+            newPawn.story.traits = oldPawn.story.traits;
+            if (recipe.forcedHead == null)
+            {
+                newPawn.story.crownType = oldPawn.story.crownType;
+            }
+
+            if (!recipe.forcedSkinColor && !recipe.randomSkinColor)
+            {
+                newPawn.TryGetComp<AlienPartGenerator.AlienComp>().ColorChannels.Clear();
+                foreach (var exposableValueTuple in oldPawn.TryGetComp<AlienPartGenerator.AlienComp>().ColorChannels)
+                {
+                    newPawn.TryGetComp<AlienPartGenerator.AlienComp>().ColorChannels[exposableValueTuple.Key] =
+                        exposableValueTuple.Value;
+                }
+            }
+
+            if (!recipe.randomHair && recipe.forcedHair == null)
+            {
+                newPawn.story.hairDef = oldPawn.story.hairDef;
+            }
+
+            if (!recipe.randomHairColor && !recipe.forcedHairColor)
+            {
+                newPawn.story.hairColor = oldPawn.story.hairColor;
+            }
+
+            newPawn.Drawer.renderer.graphics.ResolveAllGraphics();
 
             return newPawn;
         }
@@ -258,19 +279,20 @@ namespace O21Toolbox.PawnConverter
         public static Pawn ApplySkinChange(Pawn pawn, Pawn newPawn, PawnConvertingDef recipe)
         {
             //// Change skin colour if needed.
-            //if (recipe.forcedSkinColor)
-            //{
-            //    pawn.TryGetComp<AlienPartGenerator.AlienComp>().skinColor = recipe.forcedSkinColorOne;
-            //    pawn.TryGetComp<AlienPartGenerator.AlienComp>().skinColorSecond = recipe.forcedSkinColorTwo;
-            //}
+            if (recipe.forcedSkinColor)
+            {
+                var skinTuple = new AlienPartGenerator.ExposableValueTuple<Color, Color>
+                {
+                    first = recipe.forcedSkinColorOne, second = recipe.forcedSkinColorTwo
+                };
+                pawn.TryGetComp<AlienPartGenerator.AlienComp>().ColorChannels["skin"] = skinTuple;
+            }
 
-            //if (recipe.randomSkinColor)
-            //{
-            //    pawn.TryGetComp<AlienPartGenerator.AlienComp>().skinColor =
-            //        newPawn.TryGetComp<AlienPartGenerator.AlienComp>().skinColor;
-            //    pawn.TryGetComp<AlienPartGenerator.AlienComp>().skinColorSecond =
-            //        newPawn.TryGetComp<AlienPartGenerator.AlienComp>().skinColorSecond;
-            //}
+            if (recipe.randomSkinColor)
+            {
+                pawn.TryGetComp<AlienPartGenerator.AlienComp>().ColorChannels["skin"] =
+                    newPawn.TryGetComp<AlienPartGenerator.AlienComp>().ColorChannels["skin"];
+            }
 
             pawn.Drawer.renderer.graphics.ResolveAllGraphics();
 
@@ -280,19 +302,21 @@ namespace O21Toolbox.PawnConverter
         public static Pawn ApplyHeadChange(Pawn pawn, Pawn newPawn, PawnConvertingDef recipe)
         {
             // Change crown if needed.
-            if (recipe.forcedHead != null)
+            if (recipe.forcedHead == null)
             {
-                if (recipe.forcedHead == "RANDOM")
-                {
-                    pawn.TryGetComp<AlienPartGenerator.AlienComp>().crownType =
-                        newPawn.TryGetComp<AlienPartGenerator.AlienComp>().crownType;
-                    pawn.Drawer.renderer.graphics.ResolveAllGraphics();
-                }
-                else
-                {
-                    pawn.TryGetComp<AlienPartGenerator.AlienComp>().crownType = recipe.forcedHead;
-                    pawn.Drawer.renderer.graphics.ResolveAllGraphics();
-                }
+                return pawn;
+            }
+
+            if (recipe.forcedHead == "RANDOM")
+            {
+                pawn.TryGetComp<AlienPartGenerator.AlienComp>().crownType =
+                    newPawn.TryGetComp<AlienPartGenerator.AlienComp>().crownType;
+                pawn.Drawer.renderer.graphics.ResolveAllGraphics();
+            }
+            else
+            {
+                pawn.TryGetComp<AlienPartGenerator.AlienComp>().crownType = recipe.forcedHead;
+                pawn.Drawer.renderer.graphics.ResolveAllGraphics();
             }
 
             return pawn;
@@ -301,11 +325,13 @@ namespace O21Toolbox.PawnConverter
         public static Pawn ApplyBodyChange(Pawn pawn, PawnConvertingDef recipe)
         {
             // Change body if needed.
-            if (recipe.forcedBody != null)
+            if (recipe.forcedBody == null)
             {
-                pawn.story.bodyType = recipe.forcedBody;
-                pawn.Drawer.renderer.graphics.ResolveAllGraphics();
+                return pawn;
             }
+
+            pawn.story.bodyType = recipe.forcedBody;
+            pawn.Drawer.renderer.graphics.ResolveAllGraphics();
 
             return pawn;
         }
@@ -313,15 +339,17 @@ namespace O21Toolbox.PawnConverter
         public static Pawn RemoveRequiredHediffs(Pawn pawn, PawnConvertingDef recipe)
         {
             // Remove required hediffs if needed.
-            if (recipe.removeRequiredHediffs)
+            if (!recipe.removeRequiredHediffs)
             {
-                var enumerable = from def in recipe.requiredHediffs
-                    where pawn.health.hediffSet.HasHediff(def)
-                    select def;
-                foreach (var current in enumerable)
-                {
-                    pawn.health.hediffSet.hediffs.Remove(pawn.health.hediffSet.GetFirstHediffOfDef(current));
-                }
+                return pawn;
+            }
+
+            var enumerable = from def in recipe.requiredHediffs
+                where pawn.health.hediffSet.HasHediff(def)
+                select def;
+            foreach (var current in enumerable)
+            {
+                pawn.health.hediffSet.hediffs.Remove(pawn.health.hediffSet.GetFirstHediffOfDef(current));
             }
 
             return pawn;
@@ -330,15 +358,17 @@ namespace O21Toolbox.PawnConverter
         public static Pawn ApplyForcedHediff(Pawn pawn, PawnConvertingDef recipe)
         {
             // Apply Forced Hediff if needed.
-            if (recipe.forcedHediff != null)
+            if (recipe.forcedHediff == null)
             {
-                if (!pawn.health.hediffSet.hediffs.Contains(recipe.forcedHediff))
-                {
-                    pawn.health.hediffSet.AddDirect(recipe.forcedHediff);
-                }
-
-                Log.Message("Pawn already has forced Hediff, new hediff was not applied.");
+                return pawn;
             }
+
+            if (!pawn.health.hediffSet.hediffs.Contains(recipe.forcedHediff))
+            {
+                pawn.health.hediffSet.AddDirect(recipe.forcedHediff);
+            }
+
+            Log.Message("Pawn already has forced Hediff, new hediff was not applied.");
 
             return pawn;
         }
@@ -368,7 +398,6 @@ namespace O21Toolbox.PawnConverter
                 outputGender = pawn.gender;
             }
 
-            ;
             return outputGender;
         }
 
