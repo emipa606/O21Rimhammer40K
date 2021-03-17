@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[defName="Empire"]/permanentEnemyToEveryoneExcept</xpath>
+    <value>
+      <li>AstartesPlayerColony</li>
+      <li>EldarPlayerColony</li>
+      <li>KrootPlayerColonyTribal</li>
+      <li>SororitasPlayerColony</li>
+      <li>TauPlayerColony</li>
+      <li>TerranPlayerColony</li>
+      <li>ValhallanPlayerColony</li>
+      <li>KriegPlayerColony</li>
+      <li>SteelLegionPlayerColony</li>
+      <li>BlackTemplars</li>
+      <li>BloodRavens</li>
+      <li>Salamanders</li>
+      <li>Ultramarines</li>
+      <li>IGCadian412</li>
+      <li>CatachanXXV</li>
+      <li>CWUlthwe</li>
+      <li>CWAlaitoc</li>
+      <li>CWBielTan</li>
+      <li>IGKrieg143</li>
+      <li>KrootTribal</li>
+      <li>MartyredLady</li>
+      <li>IGSteelLegion808</li>
+      <li>TauEmpire</li>
+      <li>IGValhallan597</li>
+    </value>
+  </Operation>
+</Patch>
