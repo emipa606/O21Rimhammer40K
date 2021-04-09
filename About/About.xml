@@ -48,6 +48,7 @@
     <li>neronix17.toolbox</li>
     <li>XeoNovaDan.TurretExtensions</li>
     <li>Mlie.FillBackstories</li>
+    <li>syrchalis.traitvalue</li>
   </loadAfter>
   <description>[img]https://i.imgur.com/WAEzk68.png[/img]
 Update of Neronix17s mod
@@ -59,6 +60,8 @@ Neronix17 is currently working on a reworked version of this mod that is schedul
 - Since some parts of the mod depended on removed features they had to be remade, hopfully without errors
 - I have personally no experience with the Warhammer 40K universe so any questions regarding the lore I leave to the fans to answer
 - Some of the factions should now no longer be permanent enemies with the empire. They will however almost always be enemies from the start since they have negative goodwill. Thanks flameroran77 for info on what factions to modify!
+- No CE-support
+- Added support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2451324814][SYR] Trait Value[/url]
 
 - The story-framework the original mod used is not updated but it was only used for some tutorial message:
 
